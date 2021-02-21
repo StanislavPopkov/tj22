@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.util.List;
 
-public class mealServlet extends HttpServlet {
+public class MealServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<MealTo> mealToList = MealsUtil.filteredByCycles(MealsUtil.mealList, LocalTime.of(0, 0),
                 LocalTime.of(23, 59), MealsUtil.CALORIES);
